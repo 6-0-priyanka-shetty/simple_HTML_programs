@@ -1,0 +1,21 @@
+<html>
+<head>
+           <title> math expression  evaulation</title>
+</head>
+<body>
+<form id="mathForm">
+<label for="expression">Enter mathematical expression:</label>
+<input type="text" id ="expression" name="expression">
+<input type="button" value="evalate" onclick="evaluateExpression()">
+</form>
+
+<div id="result"></div>
+<script>
+              function evaluateExpression(){
+                      try{
+                                var expression=document.getElementById('expression').value;
+				var result=eval(expression);
+                                document.getElementById('result').innerText='Result:'+result;
+                          }catch(error){ document.getElementById('result').innertext='Invalid expression';
+                                              }
+                                                      }</script></body></html>
